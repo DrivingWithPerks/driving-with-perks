@@ -99,9 +99,13 @@ export default function Footer() {
             © {new Date().getFullYear()} Driving with Perks. All rights reserved.
           </p>
           <div className="flex gap-4">
-            {["Privacy Policy", "Terms of Service", "FCRA Notice"].map((item) => (
-              <a key={item} href="#" className="text-white/40 hover:text-white/70 text-xs transition-colors">
-                {item}
+            {[
+              { label: "Privacy Policy", href: "/privacy-policy" },
+              { label: "Terms of Service", href: "/terms-of-service" },
+              { label: "FCRA Disclosure", href: "/fcra-disclosure" },
+            ].map((item) => (
+              <a key={item.href} href={item.href} className="text-white/40 hover:text-white/70 text-xs transition-colors">
+                {item.label}
               </a>
             ))}
           </div>

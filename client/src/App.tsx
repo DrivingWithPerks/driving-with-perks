@@ -10,6 +10,9 @@ import SubprimeLanding from "./pages/SubprimeLanding";
 import PrimeLanding from "./pages/PrimeLanding";
 import CreditEducation from "./pages/CreditEducation";
 import AdminDashboard from "./pages/AdminDashboard";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import FCRADisclosure from "./pages/FCRADisclosure";
 
 function Router() {
   return (
@@ -20,6 +23,9 @@ function Router() {
       <Route path="/prime" component={PrimeLanding} />
       <Route path="/credit-education" component={CreditEducation} />
       <Route path="/admin" component={AdminDashboard} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
+      <Route path="/fcra-disclosure" component={FCRADisclosure} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

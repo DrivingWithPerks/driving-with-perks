@@ -52,3 +52,10 @@
 - [x] Integrate logo in navbar
 - [x] Integrate logo in footer
 - [x] Verify all tests pass with logo integration
+
+## Phase 8: Legal Pages
+- [x] Privacy Policy page (CCPA, GDPR, data handling)
+- [x] Terms of Service page (user agreements, liability)
+- [x] FCRA Disclosure page (Fair Credit Reporting Act compliance)
+- [x] Add links to legal pages in footer
+- [x] Test all legal pages load correctly
