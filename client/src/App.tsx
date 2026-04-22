@@ -13,6 +13,9 @@ import AdminDashboard from "./pages/AdminDashboard";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import FCRADisclosure from "./pages/FCRADisclosure";
+import BadCreditFunnel from "./pages/BadCreditFunnel";
+import TradeInFunnel from "./pages/TradeInFunnel";
+import FirstTimeBuyerFunnel from "./pages/FirstTimeBuyerFunnel";
 
 function Router() {
   return (
@@ -26,6 +29,9 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/fcra-disclosure" component={FCRADisclosure} />
+      <Route path="/bad-credit" component={BadCreditFunnel} />
+      <Route path="/trade-in" component={TradeInFunnel} />
+      <Route path="/first-time-buyer" component={FirstTimeBuyerFunnel} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

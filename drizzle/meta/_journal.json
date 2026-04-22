@@ -15,6 +15,13 @@
       "when": 1776877644108,
       "tag": "0001_powerful_kabuki",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1776880322852,
+      "tag": "0002_little_emma_frost",
+      "breakpoints": true
     }
   ]
 }

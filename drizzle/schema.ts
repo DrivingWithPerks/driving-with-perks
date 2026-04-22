@@ -61,8 +61,14 @@ export const leads = mysqlTable("leads", {
   coApplicantName: varchar("coApplicantName", { length: 200 }),
 
   // Admin notes
-  adminNotes: text("adminNotes"),
-
+  notes: text("notes"),
+  // Lead qualification scoring
+  qualityTier: mysqlEnum("qualityTier", ["tier1", "tier2", "tier3"]).default("tier1"),
+  qualityScore: int("qualityScore").default(0),
+  // Lead routing
+  routedTo: varchar("routedTo", { length: 255 }),
+  routedAt: timestamp("routedAt"),
+  routedPrice: decimal("routedPrice", { precision: 10, scale: 2 }),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });

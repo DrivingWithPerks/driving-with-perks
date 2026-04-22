@@ -147,10 +147,10 @@ export async function updateLeadStatus(
   await db.update(leads).set({ status }).where(eq(leads.id, id));
 }
 
-export async function updateLeadNotes(id: number, adminNotes: string): Promise<void> {
+export async function updateLeadNotes(id: number, notes: string): Promise<void> {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
-  await db.update(leads).set({ adminNotes }).where(eq(leads.id, id));
+  await db.update(leads).set({ notes }).where(eq(leads.id, id));
 }
 
 export async function getLeadStats(): Promise<{
