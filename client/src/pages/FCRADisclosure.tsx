@@ -9,7 +9,7 @@ export default function FCRADisclosure() {
       <Navbar />
       <div className="pt-32 pb-20 container max-w-4xl">
         <h1 className="font-display text-5xl font-bold text-[var(--navy-dark)] mb-2">
-          Fair Credit Reporting Act (FCRA) Disclosure
+          Canadian Credit Reporting Disclosure
         </h1>
         <p className="text-[var(--muted-foreground)] mb-12">
           Last Updated: April 22, 2026 | Effective Date: April 22, 2026
@@ -22,7 +22,7 @@ export default function FCRADisclosure() {
               <div>
                 <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Important Notice</h3>
                 <p className="text-[var(--muted-foreground)] text-sm leading-relaxed">
-                  This disclosure is required by the Fair Credit Reporting Act (FCRA) and provides important information about how we use consumer reports in evaluating your application for credit.
+                  This disclosure is required under Canadian privacy and credit reporting laws and provides important information about how Perks Ventures Ltd. uses consumer reports in evaluating your application for credit.
                 </p>
               </div>
             </div>
@@ -31,7 +31,7 @@ export default function FCRADisclosure() {
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">1. Consumer Reports and Credit Checks</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
-              When you submit an application for financing through Driving with Perks, we may obtain information about you from consumer reporting agencies (also known as credit bureaus). This information is used to:
+              When you submit an application for financing through Perks Ventures Ltd., we may obtain information about you from Canadian consumer reporting agencies (also known as credit bureaus). This information is used to:
             </p>
             <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
               <li>Evaluate your creditworthiness and ability to repay a loan</li>
@@ -40,43 +40,32 @@ export default function FCRADisclosure() {
               <li>Comply with legal and regulatory requirements</li>
             </ul>
             <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
-              By submitting an application, you authorize us to obtain consumer reports about you from credit reporting agencies.
+              By submitting an application, you authorize us to obtain consumer reports about you from Canadian credit reporting agencies.
             </p>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
-            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">2. Types of Consumer Reports</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Credit Reports</h3>
-                <p className="text-[var(--muted-foreground)] leading-relaxed">
-                  We obtain credit reports from one or more of the three major credit reporting agencies: Equifax, Experian, and TransUnion. These reports contain information about your credit history, including payment history, outstanding debts, credit inquiries, and public records.
-                </p>
-              </div>
-
-              <div className="pt-4">
-                <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Investigative Consumer Reports</h3>
-                <p className="text-[var(--muted-foreground)] leading-relaxed">
-                  We may also obtain investigative consumer reports that include information about your character, general reputation, personal characteristics, and mode of living. These reports may be obtained from third-party investigators.
-                </p>
-              </div>
-
-              <div className="pt-4">
-                <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Employment and Income Verification</h3>
-                <p className="text-[var(--muted-foreground)] leading-relaxed">
-                  We may verify your employment history and income through employment verification services and income documentation you provide.
-                </p>
-              </div>
+            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">2. Canadian Credit Reporting Agencies</h2>
+            <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
+              We obtain credit reports from one or more of the major Canadian credit reporting agencies:
+            </p>
+            <div className="space-y-3 text-[var(--muted-foreground)] text-sm">
+              <p><strong>Equifax Canada:</strong> www.equifax.ca | 1-800-465-7166</p>
+              <p><strong>Experian Canada:</strong> www.experian.ca | 1-866-579-0800</p>
+              <p><strong>TransUnion Canada:</strong> www.transunion.ca | 1-800-663-9980</p>
             </div>
+            <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
+              These reports contain information about your credit history, including payment history, outstanding debts, credit inquiries, and public records such as bankruptcies and collections.
+            </p>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
-            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">3. Your Rights Under the FCRA</h2>
+            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">3. Your Rights Under Canadian Law</h2>
             <div className="space-y-4">
               <div>
                 <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Right to Know</h3>
                 <p className="text-[var(--muted-foreground)] leading-relaxed">
-                  You have the right to know what information is in your consumer report. You may obtain a free copy of your credit report once every 12 months from each of the three major credit reporting agencies by visiting www.annualcreditreport.com or calling 1-877-322-8228.
+                  You have the right to know what information is in your consumer report. You may obtain a free copy of your credit report once every 12 months from each of the three major Canadian credit reporting agencies by visiting their websites or calling their customer service lines.
                 </p>
               </div>
 
@@ -88,16 +77,16 @@ export default function FCRADisclosure() {
               </div>
 
               <div className="pt-4">
-                <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Right to Opt-Out of Prescreened Offers</h3>
+                <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Right to Dispute with Us</h3>
                 <p className="text-[var(--muted-foreground)] leading-relaxed">
-                  You have the right to opt-out of prescreened credit offers. You can do this by calling 1-888-5-OPT-OUT (1-888-567-8688) or visiting www.optoutprescreen.com.
+                  If you believe we have made an error in our decision based on information in your consumer report, you may dispute our decision by contacting us at fcra@drivinwithperks.com.
                 </p>
               </div>
 
               <div className="pt-4">
-                <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Right to Dispute with Us</h3>
+                <h3 className="font-semibold text-[var(--navy-dark)] mb-2">Right to Lodge a Complaint</h3>
                 <p className="text-[var(--muted-foreground)] leading-relaxed">
-                  If you believe we have made an error in our decision based on information in your consumer report, you may dispute our decision by contacting us at fcra@drivinwithperks.com.
+                  If you believe a credit reporting agency has violated your rights, you have the right to lodge a complaint with the Office of the Privacy Commissioner of Canada (OPC) at www.priv.gc.ca.
                 </p>
               </div>
             </div>
@@ -136,14 +125,7 @@ export default function FCRADisclosure() {
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
-            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">6. Permissible Purpose</h2>
-            <p className="text-[var(--muted-foreground)] leading-relaxed">
-              Under the FCRA, we may only obtain your consumer report for a permissible purpose. The permissible purposes for obtaining your consumer report include: (1) evaluating your application for credit; (2) underwriting credit; (3) verifying your identity; (4) detecting fraud; (5) complying with legal obligations; and (6) other purposes permitted by law.
-            </p>
-          </Card>
-
-          <Card className="p-8 border-[var(--border)]">
-            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">7. Accuracy and Dispute Process</h2>
+            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">6. Accuracy and Dispute Process</h2>
             <div className="space-y-4">
               <p className="text-[var(--muted-foreground)] leading-relaxed">
                 If you believe information in your credit report is inaccurate, you should:
@@ -155,61 +137,61 @@ export default function FCRADisclosure() {
                 <li>Follow up to ensure the error has been corrected</li>
               </ol>
               <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
-                <strong>Contact Information for Major Credit Reporting Agencies:</strong>
+                <strong>Contact Information for Canadian Credit Reporting Agencies:</strong>
               </p>
               <div className="space-y-2 text-[var(--muted-foreground)] text-sm">
-                <p><strong>Equifax:</strong> 1-800-685-1111 | www.equifax.com</p>
-                <p><strong>Experian:</strong> 1-888-397-3742 | www.experian.com</p>
-                <p><strong>TransUnion:</strong> 1-800-916-8800 | www.transunion.com</p>
+                <p><strong>Equifax Canada:</strong> 1-800-465-7166 | www.equifax.ca</p>
+                <p><strong>Experian Canada:</strong> 1-866-579-0800 | www.experian.ca</p>
+                <p><strong>TransUnion Canada:</strong> 1-800-663-9980 | www.transunion.ca</p>
               </div>
             </div>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
-            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">8. Identity Theft and Fraud</h2>
+            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">7. Identity Theft and Fraud</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
               If you believe you are a victim of identity theft or fraud, you should:
             </p>
             <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
-              <li>Place a fraud alert on your credit report by contacting one of the three major credit reporting agencies</li>
+              <li>Place a fraud alert on your credit report by contacting one of the three major Canadian credit reporting agencies</li>
               <li>Request a free credit report to review for unauthorized accounts</li>
-              <li>File a report with the Federal Trade Commission (FTC) at www.identitytheft.gov</li>
-              <li>File a police report with your local law enforcement agency</li>
+              <li>File a report with the Royal Canadian Mounted Police (RCMP) or local law enforcement</li>
+              <li>Report the fraud to the Canadian Anti-Fraud Centre at www.antifraudcentre-centreantifraude.ca</li>
               <li>Monitor your credit report regularly for suspicious activity</li>
             </ul>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
-            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">9. Negative Information and Reporting Period</h2>
+            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">8. Negative Information and Reporting Period</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
-              Negative information on your credit report may remain for the following periods:
+              Under Canadian law, negative information on your credit report may remain for the following periods:
             </p>
             <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
-              <li>Late payments: 7 years from the date of the first missed payment</li>
-              <li>Charge-offs: 7 years from the date of the charge-off</li>
-              <li>Bankruptcy: 7-10 years depending on the chapter filed</li>
-              <li>Foreclosure: 7 years from the date of the foreclosure</li>
-              <li>Tax liens: 7 years from the date of payment</li>
-              <li>Collections: 7 years from the date of the original delinquency</li>
+              <li>Late payments: 6-7 years from the date of the first missed payment</li>
+              <li>Charge-offs: 6-7 years from the date of the charge-off</li>
+              <li>Bankruptcy: 6-7 years from the date of discharge (14 years for a second bankruptcy)</li>
+              <li>Collections: 6-7 years from the date of the original delinquency</li>
+              <li>Court judgments: 7 years from the date of judgment</li>
             </ul>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
-            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">10. Compliance and Questions</h2>
+            <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">9. Compliance and Questions</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
-              Driving with Perks is committed to complying with all provisions of the Fair Credit Reporting Act and other applicable consumer protection laws. If you have questions about this disclosure or your rights under the FCRA, please contact us:
+              Perks Ventures Ltd. is committed to complying with all provisions of Canadian privacy and credit reporting laws. If you have questions about this disclosure or your rights under Canadian law, please contact us:
             </p>
             <div className="text-[var(--muted-foreground)] space-y-2">
               <p><strong>Email:</strong> fcra@drivinwithperks.com</p>
               <p><strong>Phone:</strong> (800) 555-DRIVE</p>
-              <p><strong>Mailing Address:</strong> Driving with Perks, Attn: FCRA Compliance Officer, [Your Address]</p>
+              <p><strong>Mailing Address:</strong> Perks Ventures Ltd., Attn: Compliance Officer, British Columbia, Canada</p>
             </div>
             <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
-              You may also contact the Federal Trade Commission (FTC) for more information about your rights under the FCRA:
+              You may also contact the Office of the Privacy Commissioner of Canada (OPC) for more information about your rights:
             </p>
             <div className="text-[var(--muted-foreground)] space-y-2 text-sm">
-              <p><strong>FTC Consumer Sentinel Network:</strong> www.reportfraud.ftc.gov</p>
-              <p><strong>FTC Phone:</strong> 1-877-438-4338</p>
+              <p><strong>Website:</strong> www.priv.gc.ca</p>
+              <p><strong>Phone:</strong> 1-800-282-1376</p>
+              <p><strong>Mail:</strong> Office of the Privacy Commissioner of Canada, 30 Victoria Street, Gatineau, QC K1A 1H2</p>
             </div>
           </Card>
         </div>

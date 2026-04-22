@@ -16,7 +16,7 @@ export default function TermsOfService() {
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">1. Acceptance of Terms</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed">
-              By accessing and using this website and services provided by Driving with Perks ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our website or services. We reserve the right to modify these terms at any time, and your continued use of our website constitutes acceptance of any changes.
+              By accessing and using this website and services provided by Perks Ventures Ltd., a corporation registered in British Columbia, Canada ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our website or services. We reserve the right to modify these terms at any time, and your continued use of our website constitutes acceptance of any changes.
             </p>
           </Card>
 
@@ -31,7 +31,7 @@ export default function TermsOfService() {
               <li>Transmit viruses, malware, or any code of destructive nature</li>
               <li>Engage in any form of harassment, abuse, or threatening behavior</li>
               <li>Use automated tools (bots, scrapers) to access our website without permission</li>
-              <li>Violate any applicable laws or regulations</li>
+              <li>Violate any applicable laws or regulations, including Canadian federal and provincial laws</li>
               <li>Impersonate any person or entity</li>
             </ul>
           </Card>
@@ -43,11 +43,11 @@ export default function TermsOfService() {
                 When you submit an application through our website, you certify that:
               </p>
               <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
-                <li>You are at least 18 years of age and a legal resident of the United States</li>
+                <li>You are at least 18 years of age and a legal resident of Canada</li>
                 <li>All information provided is true, accurate, and complete</li>
                 <li>You have the authority to enter into a binding agreement</li>
-                <li>You authorize us to verify your information with credit bureaus and financial institutions</li>
-                <li>You understand that providing false information may result in criminal penalties</li>
+                <li>You authorize us to verify your information with Canadian credit bureaus and financial institutions</li>
+                <li>You understand that providing false information may result in criminal penalties under Canadian law</li>
               </ul>
               <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
                 We reserve the right to deny any application or terminate services if we discover fraudulent or inaccurate information.
@@ -62,14 +62,15 @@ export default function TermsOfService() {
                 Any financing provided through our services is subject to:
               </p>
               <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
-                <li>Approval by our lending partners and compliance with all applicable laws</li>
+                <li>Approval by our lending partners and compliance with all applicable Canadian laws</li>
                 <li>A separate loan agreement that will be provided upon approval</li>
                 <li>Verification of employment, income, and creditworthiness</li>
-                <li>Proof of insurance and valid driver's license</li>
+                <li>Proof of insurance and valid Canadian driver's license</li>
                 <li>A security interest in the financed vehicle</li>
+                <li>Compliance with the Truth in Lending Act and provincial consumer protection legislation</li>
               </ul>
               <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
-                Interest rates, terms, and conditions are determined by our lending partners based on your creditworthiness and are subject to change without notice.
+                Interest rates, terms, and conditions are determined by our lending partners based on your creditworthiness and are subject to change without notice, in compliance with Canadian lending regulations.
               </p>
             </div>
           </Card>
@@ -92,7 +93,7 @@ export default function TermsOfService() {
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">6. Limitation of Liability</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
-              To the fullest extent permitted by law, Driving with Perks shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including:
+              To the fullest extent permitted by Canadian law, Perks Ventures Ltd. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including:
             </p>
             <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
               <li>Loss of profits, revenue, data, or business opportunities</li>
@@ -101,14 +102,14 @@ export default function TermsOfService() {
               <li>Third-party conduct or content</li>
             </ul>
             <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
-              Our total liability for any claim arising from your use of our website or services shall not exceed $100 or the amount you paid us, whichever is greater.
+              Our total liability for any claim arising from your use of our website or services shall not exceed $100 CAD or the amount you paid us, whichever is greater.
             </p>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">7. Indemnification</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed">
-              You agree to indemnify, defend, and hold harmless Driving with Perks and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorney's fees) arising from: (1) your use of our website or services; (2) your violation of these Terms of Service; (3) your violation of any applicable law or regulation; or (4) your infringement of any third-party rights.
+              You agree to indemnify, defend, and hold harmless Perks Ventures Ltd. and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorney's fees) arising from: (1) your use of our website or services; (2) your violation of these Terms of Service; (3) your violation of any applicable law or regulation; or (4) your infringement of any third-party rights.
             </p>
           </Card>
 
@@ -131,7 +132,7 @@ export default function TermsOfService() {
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">9. Intellectual Property Rights</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
-              All content on our website, including text, graphics, logos, images, and software, is the property of Driving with Perks or our content suppliers and is protected by copyright, trademark, and other intellectual property laws. You may not:
+              All content on our website, including text, graphics, logos, images, and software, is the property of Perks Ventures Ltd. or our content suppliers and is protected by copyright, trademark, and other intellectual property laws. You may not:
             </p>
             <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
               <li>Reproduce, modify, or distribute our content without permission</li>
@@ -151,27 +152,31 @@ export default function TermsOfService() {
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">11. Governing Law and Dispute Resolution</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
-              These Terms of Service are governed by and construed in accordance with the laws of the United States and applicable state laws, without regard to conflict of law principles. Any disputes arising from these terms shall be resolved through:
+              These Terms of Service are governed by and construed in accordance with the laws of the Province of British Columbia and the laws of Canada applicable therein, without regard to conflict of law principles. Any disputes arising from these terms shall be resolved through:
             </p>
             <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 ml-2">
-              <li>Binding arbitration under the American Arbitration Association (AAA) rules</li>
-              <li>Arbitration shall take place in the state where you reside</li>
-              <li>Each party shall bear its own costs and attorney's fees</li>
-              <li>You waive the right to a jury trial and class action lawsuit</li>
+              <li>Negotiation and good faith discussion between the parties</li>
+              <li>Mediation under Canadian mediation rules if negotiation fails</li>
+              <li>Arbitration under the Arbitration Act (British Columbia) if mediation fails</li>
+              <li>Arbitration shall take place in British Columbia</li>
+              <li>Each party shall bear its own costs and legal fees</li>
             </ul>
+            <p className="text-[var(--muted-foreground)] leading-relaxed pt-4">
+              You consent to the exclusive jurisdiction of the courts of British Columbia for any legal proceedings.
+            </p>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">12. Severability</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed">
-              If any provision of these Terms of Service is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. We will modify the invalid provision to the minimum extent necessary to make it valid and enforceable.
+              If any provision of these Terms of Service is found to be invalid or unenforceable under Canadian law, the remaining provisions shall remain in full force and effect. We will modify the invalid provision to the minimum extent necessary to make it valid and enforceable.
             </p>
           </Card>
 
           <Card className="p-8 border-[var(--border)]">
             <h2 className="font-display text-2xl font-bold text-[var(--navy-dark)] mb-4">13. Entire Agreement</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed">
-              These Terms of Service, together with our Privacy Policy and any other agreements you enter into with us, constitute the entire agreement between you and Driving with Perks regarding your use of our website and services. These terms supersede all prior agreements and understandings.
+              These Terms of Service, together with our Privacy Policy and any other agreements you enter into with us, constitute the entire agreement between you and Perks Ventures Ltd. regarding your use of our website and services. These terms supersede all prior agreements and understandings.
             </p>
           </Card>
 
@@ -181,9 +186,10 @@ export default function TermsOfService() {
               If you have questions about these Terms of Service, please contact us:
             </p>
             <div className="text-[var(--muted-foreground)] space-y-2">
+              <p><strong>Legal Department:</strong> Perks Ventures Ltd.</p>
               <p><strong>Email:</strong> legal@drivinwithperks.com</p>
               <p><strong>Phone:</strong> (800) 555-DRIVE</p>
-              <p><strong>Mailing Address:</strong> Driving with Perks, Attn: Legal Department, [Your Address]</p>
+              <p><strong>Mailing Address:</strong> Perks Ventures Ltd., Attn: Legal Department, British Columbia, Canada</p>
             </div>
           </Card>
         </div>

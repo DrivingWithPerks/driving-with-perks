@@ -59,3 +59,11 @@
 - [x] FCRA Disclosure page (Fair Credit Reporting Act compliance)
 - [x] Add links to legal pages in footer
 - [x] Test all legal pages load correctly
+
+## Phase 9: Canadian Legal Compliance
+- [x] Update Privacy Policy for PIPEDA/PECA (BC/Canada standards)
+- [x] Update Terms of Service for Canadian law and Perks Ventures Ltd.
+- [x] Update FCRA Disclosure for Canadian credit reporting standards
+- [x] Update company name to Perks Ventures Ltd. throughout
+- [x] Update contact information and mailing address references
+- [x] Test all updated legal pages
