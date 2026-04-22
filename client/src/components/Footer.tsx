@@ -8,12 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gold flex items-center justify-center">
-                <span className="font-display font-bold text-[var(--navy)] text-sm">DF</span>
-              </div>
-              <span className="font-display font-bold text-xl text-white">DriveForward</span>
-            </div>
+            <img
+              src="/manus-storage/dwp-logo_db60f5ce.webp"
+              alt="Driving with Perks"
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Helping all credit types get behind the wheel. We specialize in credit rebuilding and automotive financing solutions tailored to your situation.
             </p>
@@ -76,7 +75,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <Mail className="w-4 h-4 mt-0.5 text-[var(--gold)] shrink-0" />
-                <span>info@driveforward.com</span>
+                <span>info@drivinwithperks.com</span>
               </li>
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-[var(--gold)] shrink-0" />
@@ -97,7 +96,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} DriveForward Auto Finance. All rights reserved.
+            © {new Date().getFullYear()} Driving with Perks. All rights reserved.
           </p>
           <div className="flex gap-4">
             {["Privacy Policy", "Terms of Service", "FCRA Notice"].map((item) => (

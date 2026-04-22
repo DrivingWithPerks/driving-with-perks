@@ -36,15 +36,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-gold flex items-center justify-center shadow-sm">
-              <span className="font-display font-bold text-[var(--navy)] text-sm">DF</span>
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-display font-bold text-lg tracking-tight">DriveForward</span>
-              <span className={`text-[10px] font-body tracking-widest uppercase ${isDark && !scrolled ? "text-white/60" : "text-[var(--muted-foreground)]"}`}>
-                Auto Finance
-              </span>
-            </div>
+            <img
+              src="/manus-storage/dwp-logo_db60f5ce.webp"
+              alt="Driving with Perks"
+              className="h-12 lg:h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
