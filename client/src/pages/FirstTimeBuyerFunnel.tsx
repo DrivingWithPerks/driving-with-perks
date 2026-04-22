@@ -18,7 +18,7 @@ export default function FirstTimeBuyerFunnel() {
                 Your First Car <span className="text-[var(--gold)]">Made Easy.</span>
               </h1>
               <p className="text-xl text-gray-200 mb-8">
-                Buying your first car shouldn't be stressful. We make it simple, affordable, and fast. Get approved today and drive home in your first car.
+                Buying your first car shouldn't be stressful. We make it simple, affordable, and fast. Get approved today and drive home in your first car across Canada.
               </p>
 
               {/* Trust badges */}
@@ -38,7 +38,7 @@ export default function FirstTimeBuyerFunnel() {
               </div>
 
               <p className="text-sm text-gray-300 italic">
-                ⭐ 5,000+ first-time buyers approved last year
+                ⭐ 2,000+ Canadian first-time buyers approved last year
               </p>
             </div>
 
@@ -155,9 +155,9 @@ export default function FirstTimeBuyerFunnel() {
               <h3 className="text-lg font-bold text-[var(--navy-dark)] mb-2">
                 "Will this help me build credit?"
               </h3>
-              <p className="text-[var(--muted-foreground)]">
-                Absolutely. Making on-time payments on your car loan is one of the best ways to build credit. After 12-24 months of payments, you'll have established credit history and a better credit score.
-              </p>
+                  <p className="text-[var(--muted-foreground)]">
+                    Absolutely. Making on-time payments on your car loan is one of the best ways to build credit in Canada. After 12-24 months of payments, you'll have established credit history and a better credit score with Canadian credit bureaus.
+                  </p>
             </Card>
 
             <Card className="p-8 border-[var(--border)]">

@@ -18,7 +18,7 @@ export default function BadCreditFunnel() {
                 Bad Credit? <span className="text-[var(--gold)]">No Problem.</span>
               </h1>
               <p className="text-xl text-gray-200 mb-8">
-                Get approved for a car TODAY—even with poor credit, bankruptcy, or repossession. We specialize in getting people like you back on the road.
+                Get approved for a car TODAY—even with poor credit, bankruptcy, or collection accounts. We specialize in getting Canadians like you back on the road.
               </p>
 
               {/* Trust badges */}
@@ -38,7 +38,7 @@ export default function BadCreditFunnel() {
               </div>
 
               <p className="text-sm text-gray-300 italic">
-                ⭐ Over 10,000 people approved in the last 12 months
+                ⭐ Over 3,000 Canadians approved in the last 12 months
               </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function BadCreditFunnel() {
               <Shield className="w-12 h-12 text-[var(--gold)] mb-4" />
               <h3 className="text-xl font-bold text-[var(--navy-dark)] mb-3">We Accept Bad Credit</h3>
               <p className="text-[var(--muted-foreground)]">
-                Bankruptcy? Repossession? Collections? We've helped people in worse situations get approved.
+                Bankruptcy? Collection accounts? Missed payments? We've helped Canadians in worse situations get approved.
               </p>
             </Card>
 
@@ -145,7 +145,7 @@ export default function BadCreditFunnel() {
                     "Will this hurt my credit score?"
                   </h3>
                   <p className="text-[var(--muted-foreground)]">
-                    Getting a car loan actually helps rebuild your credit. Making on-time payments shows lenders you're responsible, and your score improves over time. This is how people rebuild credit.
+                    Getting a car loan actually helps rebuild your credit in Canada. Making on-time payments shows lenders you're responsible, and your credit score improves over time. This is how people rebuild credit.
                   </p>
                 </div>
               </div>

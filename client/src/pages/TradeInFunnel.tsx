@@ -18,7 +18,7 @@ export default function TradeInFunnel() {
                 Upgrade Your Ride. <span className="text-[var(--gold)]">Get More Cash.</span>
               </h1>
               <p className="text-xl text-gray-200 mb-8">
-                Trade in your old car and drive home in a newer vehicle TODAY. We give you top dollar for your trade-in and get you approved instantly.
+                Trade in your old car and drive home in a newer vehicle TODAY. We give you top dollar for your trade-in and get you approved instantly across Canada.
               </p>
 
               {/* Trust badges */}
@@ -38,7 +38,7 @@ export default function TradeInFunnel() {
               </div>
 
               <p className="text-sm text-gray-300 italic">
-                ⭐ Average trade-in value: $8,500 | Average savings: $2,300
+                ⭐ Average trade-in value: $8,500 CAD | Average savings: $2,300 CAD
               </p>
             </div>
 
@@ -157,12 +157,12 @@ export default function TradeInFunnel() {
             </Card>
 
             <Card className="p-8 border-[var(--border)]">
-              <h3 className="text-lg font-bold text-[var(--navy-dark)] mb-2">
-                Can I upgrade even with bad credit?
-              </h3>
-              <p className="text-[var(--muted-foreground)]">
-                Absolutely. Your credit score doesn't affect your trade-in value. We approve people with all credit types.
-              </p>
+                <h3 className="text-lg font-bold text-[var(--navy-dark)] mb-2">
+                    "Can I upgrade even with bad credit?"
+                  </h3>
+                  <p className="text-[var(--muted-foreground)]">
+                    Absolutely. Your credit score doesn't affect your trade-in value. We approve Canadians with all credit types.
+                  </p>
             </Card>
           </div>
         </div>

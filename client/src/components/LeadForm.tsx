@@ -165,11 +165,11 @@ export default function LeadForm({ source, onSuccess }: LeadFormProps) {
                 <SelectValue placeholder="Select income range" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="2500-3500">$2,500 - $3,500</SelectItem>
-                <SelectItem value="3500-5000">$3,500 - $5,000</SelectItem>
-                <SelectItem value="5000-7500">$5,000 - $7,500</SelectItem>
-                <SelectItem value="7500-10000">$7,500 - $10,000</SelectItem>
-                <SelectItem value="10000+">$10,000+</SelectItem>
+                <SelectItem value="2500-3500">$2,500 - $3,500 CAD</SelectItem>
+                <SelectItem value="3500-5000">$3,500 - $5,000 CAD</SelectItem>
+                <SelectItem value="5000-7500">$5,000 - $7,500 CAD</SelectItem>
+                <SelectItem value="7500-10000">$7,500 - $10,000 CAD</SelectItem>
+                <SelectItem value="10000+">$10,000+ CAD</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -199,10 +199,10 @@ export default function LeadForm({ source, onSuccess }: LeadFormProps) {
                 <SelectValue placeholder="Select employment" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Employed">Employed</SelectItem>
+                <SelectItem value="Employed">Employed (Full-time)</SelectItem>
                 <SelectItem value="Self-Employed">Self-Employed</SelectItem>
-                <SelectItem value="Retired">Retired</SelectItem>
-                <SelectItem value="Other">Other</SelectItem>
+                <SelectItem value="Seasonal">Seasonal/Contract</SelectItem>
+                <SelectItem value="Other">Other Income Source</SelectItem>
               </SelectContent>
             </Select>
           </div>
