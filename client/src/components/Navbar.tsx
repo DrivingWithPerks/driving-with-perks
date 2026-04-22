@@ -37,7 +37,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <img
-              src="/manus-storage/dwp-logo_db60f5ce.webp"
+              src="/manus-storage/dwp-logo_e7452409.jpg"
               alt="Driving with Perks"
               className="h-12 lg:h-14 w-auto"
             />

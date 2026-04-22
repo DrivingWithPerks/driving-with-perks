@@ -44,7 +44,7 @@
 }
 
 :root {
-  /* Premium Navy + Gold palette */
+  /* Bright Blue + Modern palette (matching DWP logo) */
   --radius: 0.65rem;
   --background: oklch(0.98 0.005 240);
   --foreground: oklch(0.12 0.02 240);
@@ -52,40 +52,40 @@
   --card-foreground: oklch(0.12 0.02 240);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.12 0.02 240);
-  --primary: oklch(0.22 0.06 240);
+  --primary: oklch(0.50 0.20 250);
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.94 0.01 240);
-  --secondary-foreground: oklch(0.22 0.06 240);
-  --muted: oklch(0.94 0.01 240);
-  --muted-foreground: oklch(0.52 0.02 240);
-  --accent: oklch(0.72 0.15 75);
-  --accent-foreground: oklch(0.15 0.04 240);
+  --secondary: oklch(0.92 0.02 250);
+  --secondary-foreground: oklch(0.50 0.20 250);
+  --muted: oklch(0.92 0.02 250);
+  --muted-foreground: oklch(0.52 0.02 250);
+  --accent: oklch(0.50 0.20 250);
+  --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.88 0.01 240);
-  --input: oklch(0.88 0.01 240);
-  --ring: oklch(0.22 0.06 240);
-  /* Brand tokens */
-  --navy: oklch(0.22 0.06 240);
-  --navy-light: oklch(0.30 0.07 240);
-  --navy-dark: oklch(0.14 0.05 240);
-  --gold: oklch(0.72 0.15 75);
-  --gold-light: oklch(0.82 0.12 75);
-  --gold-dark: oklch(0.60 0.18 75);
-  --cream: oklch(0.97 0.01 75);
+  --border: oklch(0.88 0.01 250);
+  --input: oklch(0.88 0.01 250);
+  --ring: oklch(0.50 0.20 250);
+  /* Brand tokens - Bright Blue + White */
+  --navy: oklch(0.35 0.18 250);
+  --navy-light: oklch(0.55 0.18 250);
+  --navy-dark: oklch(0.25 0.18 250);
+  --gold: oklch(0.50 0.20 250);
+  --gold-light: oklch(0.65 0.18 250);
+  --gold-dark: oklch(0.40 0.22 250);
+  --cream: oklch(0.97 0.01 250);
   /* Sidebar */
-  --sidebar: oklch(0.20 0.06 240);
-  --sidebar-foreground: oklch(0.92 0.01 240);
-  --sidebar-primary: oklch(0.72 0.15 75);
-  --sidebar-primary-foreground: oklch(0.12 0.02 240);
-  --sidebar-accent: oklch(0.28 0.07 240);
-  --sidebar-accent-foreground: oklch(0.92 0.01 240);
-  --sidebar-border: oklch(0.30 0.06 240);
-  --sidebar-ring: oklch(0.72 0.15 75);
+  --sidebar: oklch(0.30 0.18 250);
+  --sidebar-foreground: oklch(0.92 0.01 250);
+  --sidebar-primary: oklch(0.50 0.20 250);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.55 0.18 250);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.40 0.18 250);
+  --sidebar-ring: oklch(0.50 0.20 250);
   /* Charts */
-  --chart-1: oklch(0.72 0.15 75);
+  --chart-1: oklch(0.50 0.20 250);
   --chart-2: oklch(0.55 0.15 145);
-  --chart-3: oklch(0.60 0.12 240);
+  --chart-3: oklch(0.60 0.12 250);
   --chart-4: oklch(0.65 0.18 30);
   --chart-5: oklch(0.50 0.10 300);
   /* Typography */

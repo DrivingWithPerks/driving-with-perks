@@ -91,3 +91,20 @@
 - [x] Ensure all messaging complies with PIPEDA and Canadian lending standards
 - [x] Test all pages for Canadian accuracy
 - [x] Save final checkpoint with Canadian localization
+
+## Phase 12: Logo Update
+- [ ] Upload new Driving with Perks logo
+- [ ] Update navbar with new logo
+- [ ] Update footer with new logo
+- [ ] Test logo displays correctly across all pages
+- [ ] Save final checkpoint with new logo
+
+## Phase 12: Logo & Color Scheme Update
+- [x] Update navbar with new logo URL
+- [x] Update footer with new logo URL
+- [x] Redesign global CSS color palette to match logo (bright blue primary)
+- [x] Update all component colors to new scheme
+- [x] Update all landing pages with new colors
+- [x] Update CTA buttons to match new scheme
+- [x] Test color scheme across all pages
+- [x] Save final checkpoint with new branding
