@@ -1,11 +1,10 @@
-import { eq } from "drizzle-orm";
+import { eq, desc, and, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, leads, InsertLead, Lead } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
-// Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
   if (!_db && process.env.DATABASE_URL) {
     try {
@@ -30,9 +29,7 @@ export async function upsertUser(user: InsertUser): Promise<void> {
   }
 
   try {
-    const values: InsertUser = {
-      openId: user.openId,
-    };
+    const values: InsertUser = { openId: user.openId };
     const updateSet: Record<string, unknown> = {};
 
     const textFields = ["name", "email", "loginMethod"] as const;
@@ -60,17 +57,10 @@ export async function upsertUser(user: InsertUser): Promise<void> {
       updateSet.role = 'admin';
     }
 
-    if (!values.lastSignedIn) {
-      values.lastSignedIn = new Date();
-    }
+    if (!values.lastSignedIn) values.lastSignedIn = new Date();
+    if (Object.keys(updateSet).length === 0) updateSet.lastSignedIn = new Date();
 
-    if (Object.keys(updateSet).length === 0) {
-      updateSet.lastSignedIn = new Date();
-    }
-
-    await db.insert(users).values(values).onDuplicateKeyUpdate({
-      set: updateSet,
-    });
+    await db.insert(users).values(values).onDuplicateKeyUpdate({ set: updateSet });
   } catch (error) {
     console.error("[Database] Failed to upsert user:", error);
     throw error;
@@ -79,14 +69,113 @@ export async function upsertUser(user: InsertUser): Promise<void> {
 
 export async function getUserByOpenId(openId: string) {
   const db = await getDb();
-  if (!db) {
-    console.warn("[Database] Cannot get user: database not available");
-    return undefined;
-  }
-
+  if (!db) return undefined;
   const result = await db.select().from(users).where(eq(users.openId, openId)).limit(1);
-
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+// ─── Lead helpers ────────────────────────────────────────────────────────────
+
+export async function createLead(data: InsertLead): Promise<number> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(leads).values(data);
+  return (result[0] as any).insertId as number;
+}
+
+export async function getLeads(opts: {
+  status?: string;
+  source?: string;
+  search?: string;
+  limit?: number;
+  offset?: number;
+}): Promise<{ leads: Lead[]; total: number }> {
+  const db = await getDb();
+  if (!db) return { leads: [], total: 0 };
+
+  const conditions: any[] = [];
+  if (opts.status && opts.status !== "all") {
+    conditions.push(eq(leads.status, opts.status as any));
+  }
+  if (opts.source && opts.source !== "all") {
+    conditions.push(eq(leads.source, opts.source as any));
+  }
+  if (opts.search) {
+    const term = `%${opts.search}%`;
+    conditions.push(
+      or(
+        like(leads.firstName, term),
+        like(leads.lastName, term),
+        like(leads.email, term),
+        like(leads.phone, term)
+      )
+    );
+  }
+
+  const where = conditions.length > 0 ? and(...conditions) : undefined;
+
+  const [rows, countRows] = await Promise.all([
+    db
+      .select()
+      .from(leads)
+      .where(where)
+      .orderBy(desc(leads.createdAt))
+      .limit(opts.limit ?? 50)
+      .offset(opts.offset ?? 0),
+    db
+      .select({ count: sql<number>`count(*)` })
+      .from(leads)
+      .where(where),
+  ]);
+
+  return { leads: rows, total: Number(countRows[0]?.count ?? 0) };
+}
+
+export async function getLeadById(id: number): Promise<Lead | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(leads).where(eq(leads.id, id)).limit(1);
+  return result[0];
+}
+
+export async function updateLeadStatus(
+  id: number,
+  status: "New" | "Contacted" | "Converted" | "Archived"
+): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(leads).set({ status }).where(eq(leads.id, id));
+}
+
+export async function updateLeadNotes(id: number, adminNotes: string): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(leads).set({ adminNotes }).where(eq(leads.id, id));
+}
+
+export async function getLeadStats(): Promise<{
+  total: number;
+  newCount: number;
+  contactedCount: number;
+  convertedCount: number;
+  archivedCount: number;
+}> {
+  const db = await getDb();
+  if (!db) return { total: 0, newCount: 0, contactedCount: 0, convertedCount: 0, archivedCount: 0 };
+
+  const rows = await db
+    .select({ status: leads.status, count: sql<number>`count(*)` })
+    .from(leads)
+    .groupBy(leads.status);
+
+  const map: Record<string, number> = {};
+  for (const r of rows) map[r.status] = Number(r.count);
+
+  return {
+    total: Object.values(map).reduce((a, b) => a + b, 0),
+    newCount: map["New"] ?? 0,
+    contactedCount: map["Contacted"] ?? 0,
+    convertedCount: map["Converted"] ?? 0,
+    archivedCount: map["Archived"] ?? 0,
+  };
+}
