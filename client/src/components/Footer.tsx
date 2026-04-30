@@ -79,7 +79,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-[var(--gold)] shrink-0" />
-                <span>Serving customers nationwide</span>
+                <span>Serving customers across Canada</span>
               </li>
             </ul>
             <div className="mt-6 p-4 rounded-lg bg-white/5 border border-white/10">

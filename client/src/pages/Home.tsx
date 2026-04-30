@@ -87,7 +87,7 @@ export default function Home() {
               {
                 icon: CheckCircle2,
                 title: "Nationwide Service",
-                desc: "We serve customers across the entire United States with local expertise.",
+                desc: "We serve customers across Canada with local expertise and personalized solutions.",
               },
             ].map((item, i) => {
               const Icon = item.icon;

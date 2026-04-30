@@ -92,13 +92,6 @@
 - [x] Test all pages for Canadian accuracy
 - [x] Save final checkpoint with Canadian localization
 
-## Phase 12: Logo Update
-- [ ] Upload new Driving with Perks logo
-- [ ] Update navbar with new logo
-- [ ] Update footer with new logo
-- [ ] Test logo displays correctly across all pages
-- [ ] Save final checkpoint with new logo
-
 ## Phase 12: Logo & Color Scheme Update
 - [x] Update navbar with new logo URL
 - [x] Update footer with new logo URL
@@ -108,3 +101,10 @@
 - [x] Update CTA buttons to match new scheme
 - [x] Test color scheme across all pages
 - [x] Save final checkpoint with new branding
+
+
+## Phase 13: Remove US-Specific References
+- [x] Remove "United States" from Home.tsx value prop
+- [x] Change "nationwide" to "across Canada" in Footer
+- [x] Verify all tests pass
+- [x] Save final checkpoint
