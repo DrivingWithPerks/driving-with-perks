@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--navy-dark)] text-white">
+    <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
