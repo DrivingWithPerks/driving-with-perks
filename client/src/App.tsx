@@ -16,6 +16,7 @@ import FCRADisclosure from "./pages/FCRADisclosure";
 import BadCreditFunnel from "./pages/BadCreditFunnel";
 import TradeInFunnel from "./pages/TradeInFunnel";
 import FirstTimeBuyerFunnel from "./pages/FirstTimeBuyerFunnel";
+import PlatformImprovements from "./pages/PlatformImprovements";
 
 function Router() {
   return (
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/bad-credit" component={BadCreditFunnel} />
       <Route path="/trade-in" component={TradeInFunnel} />
       <Route path="/first-time-buyer" component={FirstTimeBuyerFunnel} />
+      <Route path="/platform-improvements" component={PlatformImprovements} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

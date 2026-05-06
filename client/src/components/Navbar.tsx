@@ -18,6 +18,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/platform-improvements", label: "Why Choose Us" },
     { href: "/apply", label: "Apply Now" },
     { href: "/subprime", label: "Challenged Credit" },
     { href: "/prime", label: "Prime Financing" },
