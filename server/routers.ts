@@ -7,6 +7,7 @@ import { TRPCError } from "@trpc/server";
 import { crmRouter } from "./crm.router";
 import { leadsPublicRouter } from "./leads-public.router";
 import { stripeRouter } from "./stripe-router";
+import { smsSequencesRouter } from "./sms-sequences.router";
 import {
   createLead,
   getLeads,
@@ -68,6 +69,7 @@ export const appRouter = router({
   crm: crmRouter,
   leadsPublic: leadsPublicRouter,
   stripe: stripeRouter,
+  smsSequences: smsSequencesRouter,
   auth: router({
     me: publicProcedure.query((opts) => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
