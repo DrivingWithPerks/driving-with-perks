@@ -4,6 +4,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { TRPCError } from "@trpc/server";
+import { crmRouter } from "./crm.router";
 import {
   createLead,
   getLeads,
@@ -62,6 +63,7 @@ const leadInputSchema = z.object({
 
 export const appRouter = router({
   system: systemRouter,
+  crm: crmRouter,
   auth: router({
     me: publicProcedure.query((opts) => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
@@ -142,3 +144,4 @@ export const appRouter = router({
 });
 
 export type AppRouter = typeof appRouter;
+

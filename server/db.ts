@@ -179,3 +179,146 @@ export async function getLeadStats(): Promise<{
     archivedCount: map["Archived"] ?? 0,
   };
 }
+
+// ─── Dealer helpers ─────────────────────────────────────────────────────────
+
+export async function createDealer(data: any): Promise<number> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { dealers } = await import("../drizzle/schema");
+  const result = await db.insert(dealers).values(data);
+  return (result[0] as any).insertId as number;
+}
+
+export async function getDealerByEmail(email: string): Promise<any | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+  const { dealers } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  const result = await db.select().from(dealers).where(eq(dealers.email, email)).limit(1);
+  return result[0];
+}
+
+export async function getDealerById(id: number): Promise<any | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+  const { dealers } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  const result = await db.select().from(dealers).where(eq(dealers.id, id)).limit(1);
+  return result[0];
+}
+
+export async function updateDealerStatus(id: number, status: string): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { dealers } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  await db.update(dealers).set({ status: status as any }).where(eq(dealers.id, id));
+}
+
+// ─── Email Sequence helpers ─────────────────────────────────────────────────
+
+export async function createEmailSequence(data: any): Promise<number> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { emailSequences } = await import("../drizzle/schema");
+  const result = await db.insert(emailSequences).values(data);
+  return (result[0] as any).insertId as number;
+}
+
+export async function getEmailSequencesByLead(leadId: number): Promise<any[]> {
+  const db = await getDb();
+  if (!db) return [];
+  const { emailSequences } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  return db.select().from(emailSequences).where(eq(emailSequences.leadId, leadId));
+}
+
+export async function updateEmailSequenceStatus(id: number, status: string, sentAt?: Date): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { emailSequences } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  const updateData: any = { status: status as any };
+  if (sentAt) updateData.sentAt = sentAt;
+  await db.update(emailSequences).set(updateData).where(eq(emailSequences.id, id));
+}
+
+// ─── SMS Sequence helpers ───────────────────────────────────────────────────
+
+export async function createSmsSequence(data: any): Promise<number> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { smsSequences } = await import("../drizzle/schema");
+  const result = await db.insert(smsSequences).values(data);
+  return (result[0] as any).insertId as number;
+}
+
+export async function getSmsSequencesByLead(leadId: number): Promise<any[]> {
+  const db = await getDb();
+  if (!db) return [];
+  const { smsSequences } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  return db.select().from(smsSequences).where(eq(smsSequences.leadId, leadId));
+}
+
+export async function updateSmsSequenceStatus(id: number, status: string, sentAt?: Date): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { smsSequences } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  const updateData: any = { status: status as any };
+  if (sentAt) updateData.sentAt = sentAt;
+  await db.update(smsSequences).set(updateData).where(eq(smsSequences.id, id));
+}
+
+// ─── Lead Purchase helpers ──────────────────────────────────────────────────
+
+export async function createLeadPurchase(data: any): Promise<number> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { leadPurchases } = await import("../drizzle/schema");
+  const result = await db.insert(leadPurchases).values(data);
+  return (result[0] as any).insertId as number;
+}
+
+export async function getLeadPurchasesByDealer(dealerId: number): Promise<any[]> {
+  const db = await getDb();
+  if (!db) return [];
+  const { leadPurchases } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  return db.select().from(leadPurchases).where(eq(leadPurchases.dealerId, dealerId));
+}
+
+export async function getLeadPurchasesByLead(leadId: number): Promise<any[]> {
+  const db = await getDb();
+  if (!db) return [];
+  const { leadPurchases } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  return db.select().from(leadPurchases).where(eq(leadPurchases.leadId, leadId));
+}
+
+// ─── Lead Analytics helpers ─────────────────────────────────────────────────
+
+export async function getOrCreateDailyAnalytics(date: string): Promise<any> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { leadAnalytics } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  
+  const existing = await db.select().from(leadAnalytics).where(eq(leadAnalytics.date, date)).limit(1);
+  if (existing.length > 0) return existing[0];
+  
+  const result = await db.insert(leadAnalytics).values({ date });
+  const id = (result[0] as any).insertId as number;
+  const created = await db.select().from(leadAnalytics).where(eq(leadAnalytics.id, id)).limit(1);
+  return created[0]!;
+}
+
+export async function updateDailyAnalytics(date: string, data: any): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { leadAnalytics } = await import("../drizzle/schema");
+  const { eq } = await import("drizzle-orm");
+  await db.update(leadAnalytics).set(data).where(eq(leadAnalytics.date, date));
+}

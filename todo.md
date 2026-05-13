@@ -132,3 +132,28 @@
 - [x] Add quick wins implementation timeline
 - [x] Test page responsiveness across all breakpoints
 - [x] Save checkpoint with Platform Improvements page
+
+
+## Phase 16: Vercel Deployment Configuration
+- [x] Update vercel.json with proper full-stack configuration
+- [x] Create DEPLOYMENT.md with step-by-step instructions
+- [x] Verify build process and test suite
+- [x] Commit changes to GitHub
+
+## Phase 17: Advanced CRM Backend
+- [x] Extend database schema with CRM tables (dealers, emailSequences, smsSequences, leadPurchases, leadAnalytics)
+- [x] Generate and apply database migrations
+- [x] Create database helper functions for CRM operations
+- [x] Build CRM router with dealer management procedures
+- [x] Build email automation sequence procedures
+- [x] Build SMS automation sequence procedures
+- [x] Build lead marketplace purchase procedures
+- [x] Build analytics tracking procedures
+- [x] Add authorization checks for admin-only operations
+- [x] Create comprehensive CRM tests (33 tests passing)
+- [ ] Build dealer dashboard UI for lead purchases
+- [ ] Build email template system
+- [ ] Build SMS template system
+- [ ] Integrate Stripe for dealer payments
+- [ ] Build automated email/SMS sending service
+- [ ] Set up scheduled jobs for automation sequences
