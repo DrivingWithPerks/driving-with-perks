@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { protectedProcedure, router } from "./_core/trpc";
+import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { TRPCError } from "@trpc/server";
 import {
   createDealer,
@@ -30,8 +30,8 @@ const adminProcedure = protectedProcedure.use(({ ctx, next }) => {
 export const crmRouter = router({
   // ─── Dealer Management ──────────────────────────────────────────────────────
   dealers: router({
-    // Register a new dealer
-    register: protectedProcedure
+    // Register a new dealer (public)
+    register: publicProcedure
       .input(
         z.object({
           name: z.string().min(1),

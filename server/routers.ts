@@ -5,6 +5,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { TRPCError } from "@trpc/server";
 import { crmRouter } from "./crm.router";
+import { leadsPublicRouter } from "./leads-public.router";
 import {
   createLead,
   getLeads,
@@ -64,6 +65,7 @@ const leadInputSchema = z.object({
 export const appRouter = router({
   system: systemRouter,
   crm: crmRouter,
+  leadsPublic: leadsPublicRouter,
   auth: router({
     me: publicProcedure.query((opts) => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {

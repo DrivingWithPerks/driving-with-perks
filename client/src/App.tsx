@@ -17,6 +17,9 @@ import BadCreditFunnel from "./pages/BadCreditFunnel";
 import TradeInFunnel from "./pages/TradeInFunnel";
 import FirstTimeBuyerFunnel from "./pages/FirstTimeBuyerFunnel";
 import PlatformImprovements from "./pages/PlatformImprovements";
+import { DealerRegister } from "./pages/DealerRegister";
+import { DealerDashboard } from "./pages/DealerDashboard";
+import { DealerMarketplace } from "./pages/DealerMarketplace";
 
 function Router() {
   return (
@@ -34,6 +37,9 @@ function Router() {
       <Route path="/trade-in" component={TradeInFunnel} />
       <Route path="/first-time-buyer" component={FirstTimeBuyerFunnel} />
       <Route path="/platform-improvements" component={PlatformImprovements} />
+      <Route path="/dealer/register" component={DealerRegister} />
+      <Route path="/dealer/dashboard" component={DealerDashboard} />
+      <Route path="/dealer/marketplace" component={DealerMarketplace} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -151,9 +151,17 @@
 - [x] Build analytics tracking procedures
 - [x] Add authorization checks for admin-only operations
 - [x] Create comprehensive CRM tests (33 tests passing)
-- [ ] Build dealer dashboard UI for lead purchases
+- [x] Build dealer dashboard UI for lead purchases (prototype)
+- [x] Build dealer registration page (prototype)
+- [x] Build dealer marketplace with filtering (prototype)
+- [x] Make dealer registration publicly accessible (fix auth)
+- [x] Connect dealer marketplace to real backend queries (leadsPublic router)
+- [x] Add public leads API endpoint for marketplace
+- [x] Wire DealerMarketplace to trpc.leadsPublic.listAvailable queries
+- [ ] Connect dealer dashboard to real backend data
+- [ ] Implement real lead purchase flow with cart
+- [ ] Integrate Stripe for dealer payments
 - [ ] Build email template system
 - [ ] Build SMS template system
-- [ ] Integrate Stripe for dealer payments
 - [ ] Build automated email/SMS sending service
 - [ ] Set up scheduled jobs for automation sequences
