@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Star, TrendingUp, Clock, CheckCircle2 } from "lucide-react";
 import { useLocation } from "wouter";
+import PaymentCalculator from "@/components/PaymentCalculator";
+
 
 export default function Home() {
   const { user } = useAuth();
@@ -153,6 +155,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Payment Calculator */}
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <PaymentCalculator />
         </div>
       </section>
 
