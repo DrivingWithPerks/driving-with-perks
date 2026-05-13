@@ -1,4 +1,19 @@
 {
   "buildCommand": "pnpm install && pnpm build",
-  "outputDirectory": "dist/public"
+  "outputDirectory": "dist/public",
+  "functions": {
+    "api/trpc.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/trpc/:path*",
+      "destination": "/api/trpc.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
