@@ -41,13 +41,17 @@ export default function Footer() {
                 { href: "/credit-education", label: "Credit Education" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
-                    className="text-white/60 hover:text-[var(--gold)] text-sm transition-colors"
-                    onClick={() => window.scrollTo(0, 0)}
+                    className="text-white/60 hover:text-[var(--gold)] text-sm transition-colors cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.scrollTo(0, 0);
+                      window.location.href = link.href;
+                    }}
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
