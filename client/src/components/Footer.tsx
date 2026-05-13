@@ -44,6 +44,7 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className="text-white/60 hover:text-[var(--gold)] text-sm transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     {link.label}
                   </Link>
