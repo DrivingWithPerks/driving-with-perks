@@ -1,25 +1,15 @@
 {
   "buildCommand": "pnpm install && pnpm build",
   "outputDirectory": "dist",
-  "framework": "react",
+  "framework": "vite",
   "regions": ["iad1"],
-  "functions": {
-    "server/_core/index.ts": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
   "env": {
     "NODE_ENV": "production"
   },
   "rewrites": [
     {
-      "source": "/api/trpc/:path*",
-      "destination": "/api/trpc/:path*"
-    },
-    {
       "source": "/api/:path*",
-      "destination": "/api/:path*"
+      "destination": "/index.js"
     },
     {
       "source": "/(.*)",

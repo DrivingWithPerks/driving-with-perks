@@ -160,7 +160,9 @@
 - [x] Wire DealerMarketplace to trpc.leadsPublic.listAvailable queries
 - [ ] Connect dealer dashboard to real backend data
 - [ ] Implement real lead purchase flow with cart
-- [ ] Integrate Stripe for dealer payments
+- [x] Integrate Stripe for dealer payments
+- [x] Create Stripe checkout session procedure
+- [x] Create Stripe webhook handler
 - [ ] Build email template system
 - [ ] Build SMS template system
 - [ ] Build automated email/SMS sending service

@@ -6,6 +6,7 @@ import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { TRPCError } from "@trpc/server";
 import { crmRouter } from "./crm.router";
 import { leadsPublicRouter } from "./leads-public.router";
+import { stripeRouter } from "./stripe-router";
 import {
   createLead,
   getLeads,
@@ -66,6 +67,7 @@ export const appRouter = router({
   system: systemRouter,
   crm: crmRouter,
   leadsPublic: leadsPublicRouter,
+  stripe: stripeRouter,
   auth: router({
     me: publicProcedure.query((opts) => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
