@@ -1,19 +1,9 @@
 {
   "buildCommand": "pnpm install && pnpm build",
   "outputDirectory": "dist",
-  "framework": "vite",
+  "framework": "other",
   "regions": ["iad1"],
   "env": {
     "NODE_ENV": "production"
-  },
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/index.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }
