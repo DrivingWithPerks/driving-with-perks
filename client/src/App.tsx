@@ -5,6 +5,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import ChatWidget from "./components/ChatWidget";
 import Home from "./pages/Home";
 import Apply from "./pages/Apply";
 import SubprimeLanding from "./pages/SubprimeLanding";
@@ -69,6 +70,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <ChatWidget />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
