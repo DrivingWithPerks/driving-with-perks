@@ -80,7 +80,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <Mail className="w-4 h-4 mt-0.5 text-[var(--gold)] shrink-0" />
-                <span>info@drivinwithperks.com</span>
+                <span>info@drivingwithperks.com</span>
               </li>
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-[var(--gold)] shrink-0" />
